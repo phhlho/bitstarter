@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="utf-8">
-  <title>My First Bitstarter</title>
+  <title>Site See It! Bitstarter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -12,10 +12,21 @@
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">	
     <style type="text/css">
-	  /* Large desktop */
+      .title {
+        background: url('Skyline.png') no-repeat center;        
+        color: #ffffff;
+        height: 300px;
+      }
+
+      /* Large desktop */
 	  @media (min-width: 980px) {
+        .title {
+            background-size: cover;
+        }
+      
 	    body {
-		  padding-top: 60px;
+		  padding-top: 40px;
+          display:block;
 		}
 		.linediv-l {
 		  border-right: 1px white solid;
@@ -27,6 +38,9 @@
 	 
 	 /* Landscape phones and down */
 	 @media (max-width: 480px) {
+        body {
+            padding-top: 40px;            
+        }
 	   .copy {
 	     padding: 2.5% 10%;
 	   }
@@ -47,11 +61,12 @@
 	 .heading, .subheading {
 	   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
 	   text-align: center;
-	 }
+	 }     
 	 p.lead {
 	   padding-top: 1.5%;
 	   font-size: 24px;
 	   line-height: 30px;
+       font-weight: bold;
 	 }
 	 p {
 	   font-size: 18px;
@@ -66,7 +81,9 @@
 	   padding: 2% 0%;
 	 }
 	 .actions {
-	   background-color: #343434;
+       -moz-border-radius: 10px;
+       border-radius: 10px;
+	   background-color: #906873;
 	   padding: 3% 0%;
 	 }
 	 .video, .thermometer, .order, .social, .statistics {
@@ -95,6 +112,14 @@
 	 .footer a {
 	   color: #ccccff;
 	 }
+     
+     .header-container {
+        padding-top: 10px;
+     }
+
+     .navbar-fixed-top {
+        margin-bottom: 0px;
+    }
     </style>
  </head>
  <body>
@@ -108,7 +133,7 @@
 	  <span class="icon-bar"></span>
 	  <span class="icon-bar"></span>
 	 </button>
-	 <a class="brand" href="#">Bitstarter</a>
+	 <a class="brand" href="#">Site See It! Bitstarter</a>
 	 <div class="nav-collapse collapse">
 	  <ul class="nav">
 	   <li class="active"><a href="#">Home</a></li>
@@ -123,93 +148,83 @@
   <!-- We use row-fluid inside containers to achieve a reasonable layout. -->
   <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
   <!-- http://stackoverflow.com/a/12270322 -->
+  <div class="title container-fluid">
+   <div class="header-container">
+       <div class="row-fluid heading">
+        <div class="span12">
+         <h1>Site See It!</h1>
+        </div>
+       </div>
+       <div class="row-fluid subheading">
+        <div class="span12">
+         <!-- Special typography from Bootstrap for lead paragraph. -->
+         <!-- http://twitter.github.io/bootstrap/base-css.html@typography -->
+         <p class="lead">Are you a siteseeing pro?</p>
+        </div>
+       </div>
+   </div>  
+  </div>
+  
   <div class="container">
    <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
    <!-- www.google.com/fonts/specimen/Ubuntu -->
    <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-   <div class="row-fluid heading">
-    <div class="span12">
-	 <h1>Product</h1>
-	</div>
-   </div>
-   <div class="row-fluid subheading">
-    <div class="span12">
-	 <!-- Special typography from Bootstrap for lead paragraph. -->
-	 <!-- http://twitter.github.io/bootstrap/base-css.html@typography -->
-	 <p class="lead">One sentence description.</p>
-	</div>
-   </div>
+
    <div class="row-fluid pitch">
-    <div class="span5 offset1 video">
-	 <img class="img-polaroid" src="http://placehold.it/480x300">
-	</div>
-	
+
 	<!-- We define a new 'actions' div to contain statistics, order, and share buttons. -->
-    <div class="span5 actions">
-	 <div class="span8 offset2">
-	  <div class="statistics">
-	   <div class="span4">
-	    <!-- linediv-l and linediv-r give dividing lines that look
-        different in horizontal and vertical layouts, illustrating
-        media queries. -->
-        <div class="linediv-l">
-         <h3>1000</h3><p>backers</p>
+    <div class="actions span12">
+        <div class="span12">
+            <div class="statistics">
+                <div class="span4">
+                    <div class="linediv-l">
+                        <h3>0</h3> <p>tweets</p>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="linediv-c">
+                        <h3>$0</h3> <p>funded</p>
+                    </div>                
+                </div>
+                <div class="span4">
+                    <div class="linediv-r">
+                        <h3>60</h3> <p>days left</p>
+                    </div>                   
+                </div>                
+            </div>
+        </div>               
+        <div class="span10 offset1">
+          <!-- Bootstrap progress bar -->
+          <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+          <div class="thermometer progress active">
+           <div class="bar bar-success" style="width: 0%;"></div>
+           <div class="bar bar-warning" style="width: 100%;"></div>
+          </div>
+          <div>
+                <div class="span8 offset2 social">
+                  <!-- Social buttons are not included in default Bootstrap. -->
+                  <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+                  <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+                  <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+                </div>
+          </div>
         </div>
-       </div>
-       <div class="span4">
-        <div class="linediv-c">
-         <h3>$6000</h3> <p> of $10,000</p>
-        </div>
-       </div>
-       <div class="span4">
-        <div class="linediv-r">
-         <h3>10</h3> <p>days left</p>
-		</div>
-	   </div>
-      </div>
-	 </div>
-	 <div class="span10 offset1">
-	  <!-- Bootstrap progress bar -->
-	  <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-	  <div class="thermometer progress active">
-	   <div class="bar bar-success" style="width: 60%;"></div>
-	   <div class="bar bar-warning" style="width: 40%;"></div>
-	  </div>
-	 </div>
-	 <div class="span6 offset3 order">
-	  <!-- Standard Bootstrap button. -->
-	  <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-	  <button class="btn btn-success btn-large">Preorder</button>
-	 </div>
-	 <div class="span8 offset2 social">
-	  <!-- Social buttons are not included in default Bootstrap. -->
-	  <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-	  <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-	  <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-	 </div>
-	</div>
-   </div>
+     </div>
+   
       <!-- Beyond this part the marketing copy begins. -->
       <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" src="statue1.jpg">
         </div>
         <div class="span5 copy">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            This bitstarter was created to kick off the creation of a new website, Site See It! When vacationing in a new city (or even just exploring home), there are often way more sites than 
+            one can possibly see in the time available. Trying to see as many sites as possible in a short span is often the goal of the power tourist. The plan is to create a website to not 
+            only help coordinate this activity, but also provide the ability to rank your power touring vs. other tourists. The idea
+            is to allow users to check-in at designated sites throughout select cities, generating ranks for best tour day - as well as allowing others to see their itinerary and try to improve on it!
           </p>
         </div>
       </div>
@@ -217,21 +232,14 @@
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            What are we looking for from you? Your funding (for basic server setup costs) or your tweets! Awareness is probably more important than funding at this stage (although bitcoins never hurt either!)
+            <br/><br/>But, more importantly, what are the rewards for helping out?
+            <br/><br/>People who give us a tweet or facebook link will get beta access to the site on a first-come, first-served basis.
+            <br><br/>Donors not only will get access, but will also have a say as to what the second city we go to next!
           </p>
         </div>
         <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" src="statue2.jpg">
         </div>
       </div>
 
